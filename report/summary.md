@@ -48,7 +48,7 @@ Conducted correlation analysis to assess relationships between variables and ide
 
 - **Correlation Matrix Visualization**: Generated a colored correlation plot using the corrplot package to visualize the strength and direction of correlations between all modeling variables.
 
-<img src="figures\correlation_matrix.png" alt="Correlation Matrix" width="600">
+<img src="../figures/correlation_matrix.png" alt="Correlation Matrix" width="600">
 
 ### 3.3 Geographic Distribution Analysis
 Analyzed the geographic variation in PM2.5 exceedance across different states:
@@ -57,7 +57,7 @@ Analyzed the geographic variation in PM2.5 exceedance across different states:
 
 - **Comparative Visualization**: Created a horizontal bar chart displaying average PM2.5 days by state, providing insights into geographic patterns and regional air quality differences.
 
-<img src="figures\pm25_by_state.png" alt="Average PM2.5 Days by State" width="600">
+<img src="../figures/pm25_by_state.png" alt="Average PM2.5 Days by State" width="600">
 
 ### Key Findings
 - A significant negative correlation was identified between PM2.5 exceeding the standard and `Days Ozone`
@@ -66,13 +66,6 @@ Analyzed the geographic variation in PM2.5 exceedance across different states:
 ---
 
 ## 4. Modeling Approach
-
-### 4.1 Linear Regression
-
-- Used multiple selected predictors to model `Days PM2.5`.
-- Applied Variance Inflation Factor (VIF) to check for multicollinearity.
-- Evaluated model on 30% held-out test data.
-- Forecasted 2021 PM2.5 exceedance using 2020-trained model.
 
 ### 4.1 Linear Regression
 
@@ -92,42 +85,26 @@ Analyzed the geographic variation in PM2.5 exceedance across different states:
 - Evaluated model on 30% held-out test data.
 - Forecasted 2021 PM2.5 exceedance using 2020-trained model.
 
-<img src="figures\linear_regression_results.png" alt="Linear Regression Model Results" width="600">
-
 ### 4.2 Random Forest
 
 - Trained using the same predictors as linear model.
 - Tuned number of trees to optimize OOB error.
 
-<img src="figures\rf_error_plot.png" alt="Random Forest OOB Error by Number of Trees" width="600">
+<img src="../figures/rf_error_plot.png" alt="Random Forest OOB Error by Number of Trees" width="600">
 
 - Visualized feature importance to interpret key factors.
 
-<img src="figures\feature_importance.png" alt="Random Forest Feature Importance" width="600">
+<img src="../figures/feature_importance.png" alt="Random Forest Feature Importance" width="600">
 
 - Achieved improved performance on both 2020 test set and 2021 forecast.
-
-<img src="figures\random_forest_results.png" alt="Random Forest Model Results" width="600">
 
 ---
 
 ## 5. Model Performance Summary
 
 | Metric            | Linear Regression | Random Forest   |
-|-------------------|-------------------|------------------|
-| R² (2020 test set) | 0.69         | (fill in)        |
-| R² (2021 forecast) | 0.72        | 0.83      |
-| RMSE (2021 forecast)        | 66.31         | 51.62        |
-| MAE (2021 forecast)         | 51.29         | 31.17       |
-
-
-> The random forest model consistently outperformed the linear regression model, with better R² scores and lower prediction errors. It also generalized more effectively to 2021 data.
-
-## 5. Model Performance Summary
-
-| Metric            | Linear Regression | Random Forest   |
 |-------------------|-------------------|-----------------|
-| R² (2020 test set) | 0.69         | (fill in)        |
+| R² (2020 test set) | 0.69         | 081        |
 | R² (2021 forecast) | 0.72        | 0.83      |
 | RMSE (2021 forecast)        | 66.31         | 51.62        |
 | MAE (2021 forecast)         | 51.29         | 31.17       |
@@ -138,9 +115,9 @@ Analyzed the geographic variation in PM2.5 exceedance across different states:
 
 To further evaluate model performance, we generated actual vs. predicted scatter plots for both models using 2021 forecast data:
 
-<img src="figures\linear_vs_actual.png" alt="Linear Regression: Actual vs Predicted" width="500">
+<img src="../figures/linear_vs_actual.png" alt="Linear Regression: Actual vs Predicted" width="500">
 
-<img src="figures\rf_vs_actual.png" alt="Random Forest: Actual vs Predicted" width="500">
+<img src="../figures/rf_vs_actual.png" alt="Random Forest: Actual vs Predicted" width="500">
 
 The scatter plots reveal significant differences in predictive performance between the two models:
 
