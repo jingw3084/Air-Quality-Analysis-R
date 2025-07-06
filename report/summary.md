@@ -35,11 +35,11 @@ To understand the distribution characteristics of the target variable, we examin
 
 - **Histogram Analysis**: Created a distribution histogram of `Days.PM2.5` with 30 bins to visualize the frequency distribution and identify the overall shape of the data distribution.
 
-<img src="figures\PM2.5_Days_Distribution.png" alt="PM2.5 Days Distribution" width="600">
+<img src="..figures\PM2.5_Days_Distribution.png" alt="PM2.5 Days Distribution" width="600">
 
 - **Boxplot Analysis**: Generated a boxplot to examine the central tendency, spread, and presence of outliers in PM2.5 exceedance days across all observations.
 
-<img src="figures\Boxplot_of_PM2.5_Days.png" alt="PM2.5 Days Distribution" width="600">
+<img src="..figures\Boxplot_of_PM2.5_Days.png" alt="PM2.5 Days Distribution" width="600">
 
 ### 3.2 Correlation Analysis
 Conducted correlation analysis to assess relationships between variables and identify potential multicollinearity issues:
